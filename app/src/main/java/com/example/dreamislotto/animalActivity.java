@@ -13,17 +13,83 @@ public class animalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animal);
 
-        Button button = (Button) findViewById(R.id.bear);
-        button.setOnClickListener(new View.OnClickListener() {
+        final Button buttonTiger = (Button) findViewById(R.id.Tiger);
+        buttonTiger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent  = new Intent(animalActivity.this, MainActivity.class);
-                intent.putExtra("bear", 1);
-                intent.putExtra("bear", 8);
-                intent.putExtra("bear", 16);
-
-                startActivity(intent);
+                if(buttonTiger.isSelected()){
+                    buttonTiger.setSelected(false);
+                }else{
+                    buttonTiger.setSelected(true);
+                }
             }
         });
+        final Button buttonSnake = (Button) findViewById(R.id.snake);
+        buttonSnake.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonSnake.isSelected()){
+                    buttonSnake.setSelected(false);
+                }else{
+                    buttonSnake.setSelected(true);
+                }
+            }
+        });
+        final Button buttonMonkey = (Button) findViewById(R.id.monkey);
+        buttonMonkey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonMonkey.isSelected()){
+                    buttonMonkey.setSelected(false);
+                }else{
+                    buttonMonkey.setSelected(true);
+                }
+            }
+        });
+        final Button buttonPig = (Button) findViewById(R.id.pig);
+        buttonPig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonPig.isSelected()){
+                    buttonPig.setSelected(false);
+                }else{
+                    buttonPig.setSelected(true);
+                }
+            }
+        });
+        final Button buttonBear = (Button) findViewById(R.id.bear);
+        buttonBear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonBear.isSelected()){
+                    buttonBear.setSelected(false);
+                }else{
+                    buttonBear.setSelected(true);
+                }
+            }
+        });
+        final Button buttonOwl = (Button) findViewById(R.id.owl);
+        buttonOwl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonOwl.isSelected()){
+                    buttonOwl.setSelected(false);
+                }else{
+                    buttonOwl.setSelected(true);
+                }
+            }
+        });
+        final Button buttonTurkey = (Button) findViewById(R.id.turkey);
+        buttonTurkey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonTurkey.isSelected()){
+                    buttonTurkey.setSelected(false);
+                }else{
+                    buttonTurkey.setSelected(true);
+                }
+            }
+        });
+
     }
 }

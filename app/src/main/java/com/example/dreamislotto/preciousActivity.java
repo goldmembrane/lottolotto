@@ -8,20 +8,114 @@ import android.widget.Button;
 
 public class preciousActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_precious);
 
-        Button button = (Button) findViewById(R.id.god);
-        button.setOnClickListener(new View.OnClickListener() {
+        final Button buttonGod = (Button) findViewById(R.id.god);
+        buttonGod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(preciousActivity.this, MainActivity.class);
-                intent.putExtra("god", 1);
+                if(buttonGod.isSelected()){
+                    buttonGod.setSelected(false);
+                }else{
+                    buttonGod.setSelected(true);
+                }
 
-                startActivity(intent);
+
+
             }
         });
+
+        final Button buttonDragon= (Button) findViewById(R.id.dragon);
+        buttonDragon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonDragon.isSelected()){
+                    buttonDragon.setSelected(false);
+                }else{
+                    buttonDragon.setSelected(true);
+                }
+            }
+        });
+        final Button buttonPray = (Button) findViewById(R.id.pray);
+        buttonPray.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonPray.isSelected()){
+                    buttonPray.setSelected(false);
+                }else{
+                    buttonPray.setSelected(true);
+                }
+            }
+        });
+        final Button buttonPastor = (Button) findViewById(R.id.pastor);
+        buttonPastor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonPastor.isSelected()){
+                    buttonPastor.setSelected(false);
+                }else{
+                    buttonPastor.setSelected(true);
+                }
+
+            }
+        });
+        final Button buttonGold = (Button) findViewById(R.id.gold);
+        buttonGold.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonGold.isSelected()){
+                    buttonGold.setSelected(false);
+                }else{
+                    buttonGold.setSelected(true);
+                }
+
+            }
+        });
+        final Button buttonPrince = (Button) findViewById(R.id.prince);
+        buttonPrince.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonPrince.isSelected()){
+                    buttonPrince.setSelected(false);
+                }else{
+                    buttonPrince.setSelected(true);
+                }
+
+            }
+        });
+        final Button buttonCross = (Button) findViewById(R.id.cross);
+        buttonCross.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonCross.isSelected()){
+                    buttonCross.setSelected(false);
+                }else{
+                    buttonCross.setSelected(true);
+                }
+
+            }
+        });
+        final Button buttonDiamond = (Button) findViewById(R.id.diamond);
+        buttonDiamond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(buttonDiamond.isSelected()){
+                    buttonDiamond.setSelected(false);
+                }else{
+                    buttonDiamond.setSelected(true);
+                }
+
+            }
+        });
+
+
+
+
     }
+
 }

@@ -158,4 +158,20 @@
         app:layout_constraintTop_toBottomOf="@+id/egg"
         android:background="@drawable/selector_view"/>
 
+    <Button
+        android:id="@+id/result"
+        android:layout_width="241dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginRight="88dp"
+        android:layout_marginBottom="80dp"
+        android:text="결과보기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

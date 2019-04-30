@@ -32,12 +32,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="20dp"
+        android:background="@drawable/selector_view"
         android:text="하느님"
         app:layout_constraintBottom_toTopOf="@+id/gold"
         app:layout_constraintEnd_toStartOf="@+id/dragon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/selector_view"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/dragon"
@@ -49,12 +49,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="20dp"
+        android:background="@drawable/selector_view"
         android:text="용"
         app:layout_constraintBottom_toTopOf="@+id/prince"
         app:layout_constraintEnd_toStartOf="@+id/pray"
         app:layout_constraintStart_toEndOf="@+id/god"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/selector_view"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/pray"
@@ -66,12 +66,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="20dp"
+        android:background="@drawable/selector_view"
         android:text="기도"
         app:layout_constraintBottom_toTopOf="@+id/cross"
         app:layout_constraintEnd_toStartOf="@+id/pastor"
         app:layout_constraintStart_toEndOf="@+id/dragon"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/selector_view"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/pastor"
@@ -83,12 +83,12 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="20dp"
+        android:background="@drawable/selector_view"
         android:text="목사님"
         app:layout_constraintBottom_toTopOf="@+id/diamond"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/pray"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/selector_view"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/gold"
@@ -100,12 +100,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="300dp"
+        android:background="@drawable/selector_view"
         android:text="금"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/prince"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/god"
-        android:background="@drawable/selector_view"/>
+        app:layout_constraintTop_toBottomOf="@+id/god" />
 
     <Button
         android:id="@+id/prince"
@@ -117,12 +117,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="300dp"
+        android:background="@drawable/selector_view"
         android:text="왕자"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cross"
         app:layout_constraintStart_toEndOf="@+id/gold"
-        app:layout_constraintTop_toBottomOf="@+id/dragon"
-        android:background="@drawable/selector_view"/>
+        app:layout_constraintTop_toBottomOf="@+id/dragon" />
 
     <Button
         android:id="@+id/cross"
@@ -134,12 +134,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="300dp"
+        android:background="@drawable/selector_view"
         android:text="십자가"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/diamond"
         app:layout_constraintStart_toEndOf="@+id/prince"
-        app:layout_constraintTop_toBottomOf="@+id/pray"
-        android:background="@drawable/selector_view"/>
+        app:layout_constraintTop_toBottomOf="@+id/pray" />
 
     <Button
         android:id="@+id/diamond"
@@ -151,11 +151,27 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="300dp"
+        android:background="@drawable/selector_view"
         android:text="다이아몬드"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cross"
-        app:layout_constraintTop_toBottomOf="@+id/pastor"
-        android:background="@drawable/selector_view"/>
+        app:layout_constraintTop_toBottomOf="@+id/pastor" />
+
+    <Button
+        android:id="@+id/result"
+        android:layout_width="230dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginRight="88dp"
+        android:layout_marginBottom="80dp"
+        android:text="결과보기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
