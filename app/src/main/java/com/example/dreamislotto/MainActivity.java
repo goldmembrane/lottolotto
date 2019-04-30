@@ -8,6 +8,7 @@ import android.widget.TextView;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,6 +40,17 @@ public class MainActivity extends AppCompatActivity {
         set.add(no6);
         set.add(no7);
         set.add(no8);
+
+
+        for(Iterator<Integer> it = set.iterator() ; it.hasNext() ; )
+        {
+            Integer value = it.next();
+
+            if(value == 0)
+            {
+                it.remove();
+            }
+        }
 
 
 
