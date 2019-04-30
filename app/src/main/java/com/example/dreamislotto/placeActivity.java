@@ -1,5 +1,6 @@
 package com.example.dreamislotto;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,8 @@ public class placeActivity extends AppCompatActivity {
         buttonPlayground.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 if(buttonPlayground.isSelected()){
                     buttonPlayground.setSelected(false);
                 }else{

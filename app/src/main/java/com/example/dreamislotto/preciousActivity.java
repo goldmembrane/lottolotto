@@ -15,13 +15,20 @@ public class preciousActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_precious);
 
+       final Intent intent = new Intent(preciousActivity.this, MainActivity.class);
+
+
         final Button buttonGod = (Button) findViewById(R.id.god);
         buttonGod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
                 if(buttonGod.isSelected()){
                     buttonGod.setSelected(false);
                 }else{
+                    intent.putExtra("god",1);
                     buttonGod.setSelected(true);
                 }
 
@@ -37,6 +44,7 @@ public class preciousActivity extends AppCompatActivity {
                 if(buttonDragon.isSelected()){
                     buttonDragon.setSelected(false);
                 }else{
+                    intent.putExtra("dragon",7);
                     buttonDragon.setSelected(true);
                 }
             }
@@ -48,6 +56,7 @@ public class preciousActivity extends AppCompatActivity {
                 if(buttonPray.isSelected()){
                     buttonPray.setSelected(false);
                 }else{
+                    intent.putExtra("pray",5);
                     buttonPray.setSelected(true);
                 }
             }
@@ -59,6 +68,8 @@ public class preciousActivity extends AppCompatActivity {
                 if(buttonPastor.isSelected()){
                     buttonPastor.setSelected(false);
                 }else{
+
+                    intent.putExtra("pastor",21);
                     buttonPastor.setSelected(true);
                 }
 
@@ -71,6 +82,7 @@ public class preciousActivity extends AppCompatActivity {
                 if(buttonGold.isSelected()){
                     buttonGold.setSelected(false);
                 }else{
+                    intent.putExtra("gold",11);
                     buttonGold.setSelected(true);
                 }
 
@@ -83,6 +95,7 @@ public class preciousActivity extends AppCompatActivity {
                 if(buttonPrince.isSelected()){
                     buttonPrince.setSelected(false);
                 }else{
+                    intent.putExtra("prince",27);
                     buttonPrince.setSelected(true);
                 }
 
@@ -95,6 +108,7 @@ public class preciousActivity extends AppCompatActivity {
                 if(buttonCross.isSelected()){
                     buttonCross.setSelected(false);
                 }else{
+                    intent.putExtra("cross",10);
                     buttonCross.setSelected(true);
                 }
 
@@ -107,11 +121,23 @@ public class preciousActivity extends AppCompatActivity {
                 if(buttonDiamond.isSelected()){
                     buttonDiamond.setSelected(false);
                 }else{
+                    intent.putExtra("diamond",28);
                     buttonDiamond.setSelected(true);
                 }
 
             }
         });
+
+
+        Button buttonShowResult = (Button) findViewById(R.id.result);
+        buttonShowResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
+            }
+        });
+
+
 
 
 
