@@ -36,7 +36,8 @@
         app:layout_constraintBottom_toTopOf="@+id/gold"
         app:layout_constraintEnd_toStartOf="@+id/dragon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/dragon"
@@ -52,7 +53,8 @@
         app:layout_constraintBottom_toTopOf="@+id/prince"
         app:layout_constraintEnd_toStartOf="@+id/pray"
         app:layout_constraintStart_toEndOf="@+id/god"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/pray"
@@ -68,7 +70,8 @@
         app:layout_constraintBottom_toTopOf="@+id/cross"
         app:layout_constraintEnd_toStartOf="@+id/pastor"
         app:layout_constraintStart_toEndOf="@+id/dragon"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/pastor"
@@ -84,7 +87,8 @@
         app:layout_constraintBottom_toTopOf="@+id/diamond"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/pray"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/gold"
@@ -100,7 +104,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/prince"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/god" />
+        app:layout_constraintTop_toBottomOf="@+id/god"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/prince"
@@ -116,7 +121,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cross"
         app:layout_constraintStart_toEndOf="@+id/gold"
-        app:layout_constraintTop_toBottomOf="@+id/dragon" />
+        app:layout_constraintTop_toBottomOf="@+id/dragon"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/cross"
@@ -132,7 +138,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/diamond"
         app:layout_constraintStart_toEndOf="@+id/prince"
-        app:layout_constraintTop_toBottomOf="@+id/pray" />
+        app:layout_constraintTop_toBottomOf="@+id/pray"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/diamond"
@@ -148,6 +155,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cross"
-        app:layout_constraintTop_toBottomOf="@+id/pastor" />
+        app:layout_constraintTop_toBottomOf="@+id/pastor"
+        android:background="@drawable/selector_view"/>
 
 </android.support.constraint.ConstraintLayout>

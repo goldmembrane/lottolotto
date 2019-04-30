@@ -19,7 +19,8 @@
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/tofu"
@@ -35,7 +36,8 @@
         app:layout_constraintBottom_toTopOf="@+id/garlic"
         app:layout_constraintEnd_toStartOf="@+id/banana"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/banana"
@@ -51,7 +53,8 @@
         app:layout_constraintBottom_toTopOf="@+id/orange"
         app:layout_constraintEnd_toStartOf="@+id/coffee"
         app:layout_constraintStart_toEndOf="@+id/tofu"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/coffee"
@@ -67,7 +70,8 @@
         app:layout_constraintBottom_toTopOf="@+id/peach"
         app:layout_constraintEnd_toStartOf="@+id/egg"
         app:layout_constraintStart_toEndOf="@+id/banana"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/egg"
@@ -83,7 +87,8 @@
         app:layout_constraintBottom_toTopOf="@+id/chicken"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/coffee"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/garlic"
@@ -99,7 +104,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/orange"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tofu" />
+        app:layout_constraintTop_toBottomOf="@+id/tofu"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/orange"
@@ -115,7 +121,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/peach"
         app:layout_constraintStart_toEndOf="@+id/garlic"
-        app:layout_constraintTop_toBottomOf="@+id/banana" />
+        app:layout_constraintTop_toBottomOf="@+id/banana"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/peach"
@@ -131,7 +138,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/chicken"
         app:layout_constraintStart_toEndOf="@+id/orange"
-        app:layout_constraintTop_toBottomOf="@+id/coffee" />
+        app:layout_constraintTop_toBottomOf="@+id/coffee"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/chicken"
@@ -147,6 +155,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/peach"
-        app:layout_constraintTop_toBottomOf="@+id/egg" />
+        app:layout_constraintTop_toBottomOf="@+id/egg"
+        android:background="@drawable/selector_view"/>
 
 </android.support.constraint.ConstraintLayout>

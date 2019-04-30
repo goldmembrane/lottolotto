@@ -19,7 +19,8 @@
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/playground"
@@ -35,7 +36,8 @@
         app:layout_constraintBottom_toTopOf="@+id/jungle"
         app:layout_constraintEnd_toStartOf="@+id/cellar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/cellar"
@@ -51,7 +53,8 @@
         app:layout_constraintBottom_toTopOf="@+id/park"
         app:layout_constraintEnd_toStartOf="@+id/funeral"
         app:layout_constraintStart_toEndOf="@+id/playground"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/funeral"
@@ -67,7 +70,8 @@
         app:layout_constraintBottom_toTopOf="@+id/market"
         app:layout_constraintEnd_toStartOf="@+id/jail"
         app:layout_constraintStart_toEndOf="@+id/cellar"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/jungle"
@@ -83,7 +87,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/park"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playground" />
+        app:layout_constraintTop_toBottomOf="@+id/playground"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/park"
@@ -99,7 +104,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/market"
         app:layout_constraintStart_toEndOf="@+id/jungle"
-        app:layout_constraintTop_toBottomOf="@+id/cellar" />
+        app:layout_constraintTop_toBottomOf="@+id/cellar"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/market"
@@ -115,7 +121,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sky"
         app:layout_constraintStart_toEndOf="@+id/park"
-        app:layout_constraintTop_toBottomOf="@+id/funeral" />
+        app:layout_constraintTop_toBottomOf="@+id/funeral"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/jail"
@@ -131,7 +138,8 @@
         app:layout_constraintBottom_toTopOf="@+id/sky"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/funeral"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/sky"
@@ -147,5 +155,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/market"
-        app:layout_constraintTop_toBottomOf="@+id/jail" />
+        app:layout_constraintTop_toBottomOf="@+id/jail"
+        android:background="@drawable/selector_view"/>
 </android.support.constraint.ConstraintLayout>

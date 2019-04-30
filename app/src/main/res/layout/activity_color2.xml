@@ -35,7 +35,8 @@
         app:layout_constraintBottom_toTopOf="@+id/purple"
         app:layout_constraintEnd_toStartOf="@+id/yellow"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/yellow"
@@ -51,7 +52,8 @@
         app:layout_constraintBottom_toTopOf="@+id/silver"
         app:layout_constraintEnd_toStartOf="@+id/black"
         app:layout_constraintStart_toEndOf="@+id/red"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/black"
@@ -67,7 +69,8 @@
         app:layout_constraintBottom_toTopOf="@+id/white"
         app:layout_constraintEnd_toStartOf="@+id/blue"
         app:layout_constraintStart_toEndOf="@+id/yellow"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/blue"
@@ -83,7 +86,8 @@
         app:layout_constraintBottom_toTopOf="@+id/green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/black"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/silver"
@@ -99,7 +103,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/white"
         app:layout_constraintStart_toEndOf="@+id/purple"
-        app:layout_constraintTop_toBottomOf="@+id/yellow" />
+        app:layout_constraintTop_toBottomOf="@+id/yellow"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/white"
@@ -115,7 +120,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/green"
         app:layout_constraintStart_toEndOf="@+id/silver"
-        app:layout_constraintTop_toBottomOf="@+id/black" />
+        app:layout_constraintTop_toBottomOf="@+id/black"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/green"
@@ -131,7 +137,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/white"
-        app:layout_constraintTop_toBottomOf="@+id/blue" />
+        app:layout_constraintTop_toBottomOf="@+id/blue"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/purple"
@@ -147,5 +154,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/silver"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/red" />
+        app:layout_constraintTop_toBottomOf="@+id/red"
+        android:background="@drawable/selector_view"/>
 </android.support.constraint.ConstraintLayout>

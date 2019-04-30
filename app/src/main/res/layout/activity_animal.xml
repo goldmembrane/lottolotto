@@ -35,7 +35,8 @@
         app:layout_constraintBottom_toTopOf="@+id/bear"
         app:layout_constraintEnd_toStartOf="@+id/snake"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/snake"
@@ -51,7 +52,8 @@
         app:layout_constraintBottom_toTopOf="@+id/owl"
         app:layout_constraintEnd_toStartOf="@+id/monkey"
         app:layout_constraintStart_toEndOf="@+id/Tiger"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/monkey"
@@ -67,7 +69,8 @@
         app:layout_constraintBottom_toTopOf="@+id/turkey"
         app:layout_constraintEnd_toStartOf="@+id/pig"
         app:layout_constraintStart_toEndOf="@+id/snake"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/pig"
@@ -83,7 +86,8 @@
         app:layout_constraintBottom_toTopOf="@+id/pigeon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/monkey"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/bear"
@@ -99,7 +103,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/owl"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Tiger" />
+        app:layout_constraintTop_toBottomOf="@+id/Tiger"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/owl"
@@ -115,7 +120,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/turkey"
         app:layout_constraintStart_toEndOf="@+id/bear"
-        app:layout_constraintTop_toBottomOf="@+id/snake" />
+        app:layout_constraintTop_toBottomOf="@+id/snake"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/turkey"
@@ -131,7 +137,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/pigeon"
         app:layout_constraintStart_toEndOf="@+id/owl"
-        app:layout_constraintTop_toBottomOf="@+id/monkey" />
+        app:layout_constraintTop_toBottomOf="@+id/monkey"
+        android:background="@drawable/selector_view"/>
 
     <Button
         android:id="@+id/pigeon"
@@ -147,6 +154,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/turkey"
-        app:layout_constraintTop_toBottomOf="@+id/pig" />
+        app:layout_constraintTop_toBottomOf="@+id/pig"
+        android:background="@drawable/selector_view"/>
 
 </android.support.constraint.ConstraintLayout>
