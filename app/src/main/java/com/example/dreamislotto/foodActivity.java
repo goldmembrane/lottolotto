@@ -13,6 +13,10 @@ public class foodActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
 
+        final Intent intent = new Intent(foodActivity.this, MainActivity.class);
+
+
+
         final Button buttonTofu = (Button) findViewById(R.id.tofu);
         buttonTofu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -20,6 +24,8 @@ public class foodActivity extends AppCompatActivity {
                 if(buttonTofu.isSelected()){
                     buttonTofu.setSelected(false);
                 }else{
+                    intent.putExtra("tofu", 4);
+                    intent.putExtra("tofu2", 5);
                     buttonTofu.setSelected(true);
                 }
             }
@@ -31,6 +37,7 @@ public class foodActivity extends AppCompatActivity {
                 if(buttonBanana.isSelected()){
                     buttonBanana.setSelected(false);
                 }else{
+                    intent.putExtra("banana", 6);
                     buttonBanana.setSelected(true);
                 }
             }
@@ -42,6 +49,7 @@ public class foodActivity extends AppCompatActivity {
                 if(buttonCoffee.isSelected()){
                     buttonCoffee.setSelected(false);
                 }else{
+                    intent.putExtra("coffee", 7);
                     buttonCoffee.setSelected(true);
                 }
             }
@@ -53,6 +61,8 @@ public class foodActivity extends AppCompatActivity {
                 if(buttonEgg.isSelected()){
                     buttonEgg.setSelected(false);
                 }else{
+                    intent.putExtra("egg", 8);
+                    intent.putExtra("egg2", 10);
                     buttonEgg.setSelected(true);
                 }
             }
@@ -64,6 +74,7 @@ public class foodActivity extends AppCompatActivity {
                 if(buttonGarlic.isSelected()){
                     buttonGarlic.setSelected(false);
                 }else{
+                    intent.putExtra("garlic", 14);
                     buttonGarlic.setSelected(true);
                 }
             }
@@ -75,6 +86,9 @@ public class foodActivity extends AppCompatActivity {
                 if(buttonOrange.isSelected()){
                     buttonOrange.setSelected(false);
                 }else{
+                    intent.putExtra("orange", 5);
+                    intent.putExtra("orange2", 18);
+                    intent.putExtra("orange3", 20);
                     buttonOrange.setSelected(true);
                 }
             }
@@ -86,6 +100,7 @@ public class foodActivity extends AppCompatActivity {
                 if(buttonPeach.isSelected()){
                     buttonPeach.setSelected(false);
                 }else{
+                    intent.putExtra("peach", 28);
                     buttonPeach.setSelected(true);
                 }
             }
@@ -97,8 +112,18 @@ public class foodActivity extends AppCompatActivity {
                 if(buttonChicken.isSelected()){
                     buttonChicken.setSelected(false);
                 }else{
+                    intent.putExtra("chicken", 10);
+                    intent.putExtra("chicken2", 21);
                     buttonChicken.setSelected(true);
                 }
+            }
+        });
+
+        Button buttonShowResult = (Button) findViewById(R.id.result);
+        buttonShowResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
             }
         });
         Button buttonGoPrecious2 = (Button) findViewById(R.id.goPrecious2);

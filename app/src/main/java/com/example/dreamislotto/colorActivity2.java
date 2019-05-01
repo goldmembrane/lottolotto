@@ -13,6 +13,7 @@ public class colorActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color2);
 
+        final Intent intent = new Intent(colorActivity2.this, MainActivity.class);
 
         final Button buttonRed = (Button) findViewById(R.id.red);
         buttonRed.setOnClickListener(new View.OnClickListener() {
@@ -21,6 +22,7 @@ public class colorActivity2 extends AppCompatActivity {
                 if(buttonRed.isSelected()){
                     buttonRed.setSelected(false);
                 }else{
+                    intent.putExtra("red", 1);
                     buttonRed.setSelected(true);
                 }
             }
@@ -32,6 +34,7 @@ public class colorActivity2 extends AppCompatActivity {
                 if(buttonYellow.isSelected()){
                     buttonYellow.setSelected(false);
                 }else{
+                    intent.putExtra("yellow", 3);
                     buttonYellow.setSelected(true);
                 }
             }
@@ -43,6 +46,10 @@ public class colorActivity2 extends AppCompatActivity {
                 if(buttonBlack.isSelected()){
                     buttonBlack.setSelected(false);
                 }else{
+                    intent.putExtra("black", 8);
+                    intent.putExtra("black2", 9);
+                    intent.putExtra("black3", 32);
+                    intent.putExtra("black4", 33);
                     buttonBlack.setSelected(true);
                 }
             }
@@ -54,6 +61,8 @@ public class colorActivity2 extends AppCompatActivity {
                 if(buttonBlue.isSelected()){
                     buttonBlue.setSelected(false);
                 }else{
+                    intent.putExtra("blue", 5);
+                    intent.putExtra("blue2", 32);
                     buttonBlue.setSelected(true);
                 }
             }
@@ -65,6 +74,7 @@ public class colorActivity2 extends AppCompatActivity {
                 if(buttonSilver.isSelected()){
                     buttonSilver.setSelected(false);
                 }else{
+                    intent.putExtra("silver", 17);
                     buttonSilver.setSelected(true);
                 }
             }
@@ -76,6 +86,8 @@ public class colorActivity2 extends AppCompatActivity {
                 if(buttonWhite.isSelected()){
                     buttonWhite.setSelected(false);
                 }else{
+                    intent.putExtra("white", 38);
+                    intent.putExtra("white2", 39);
                     buttonWhite.setSelected(true);
                 }
             }
@@ -87,6 +99,7 @@ public class colorActivity2 extends AppCompatActivity {
                 if(buttonGreen.isSelected()){
                     buttonGreen.setSelected(false);
                 }else{
+                    intent.putExtra("green", 4);
                     buttonGreen.setSelected(true);
                 }
             }
@@ -98,8 +111,16 @@ public class colorActivity2 extends AppCompatActivity {
                 if(buttonPurple.isSelected()){
                     buttonPurple.setSelected(false);
                 }else{
+                    intent.putExtra("purple", 7);
                     buttonPurple.setSelected(true);
                 }
+            }
+        });
+        Button buttonShowResult = (Button) findViewById(R.id.result);
+        buttonShowResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
             }
         });
 
