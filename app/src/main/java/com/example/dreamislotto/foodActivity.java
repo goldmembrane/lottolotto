@@ -1,5 +1,6 @@
 package com.example.dreamislotto;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -98,6 +99,22 @@ public class foodActivity extends AppCompatActivity {
                 }else{
                     buttonChicken.setSelected(true);
                 }
+            }
+        });
+        Button buttonGoPrecious2 = (Button) findViewById(R.id.goPrecious2);
+        buttonGoPrecious2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentGoPrecious2 = new Intent(getApplicationContext(), preciousActivity.class);
+                startActivity(intentGoPrecious2);
+            }
+        });
+        Button buttonGoAnimal2 = (Button) findViewById(R.id.goAnimal2);
+        buttonGoAnimal2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentGoAnimal2 = new Intent(getApplicationContext(), animalActivity.class);
+                startActivity(intentGoAnimal2);
             }
         });
     }

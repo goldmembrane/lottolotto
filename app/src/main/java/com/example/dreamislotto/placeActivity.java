@@ -13,6 +13,10 @@ public class placeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place);
 
+
+        final Intent intent = new Intent(placeActivity.this, MainActivity.class);
+
+
         final Button buttonPlayground = (Button) findViewById(R.id.playground);
         buttonPlayground.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,6 +26,8 @@ public class placeActivity extends AppCompatActivity {
                 if(buttonPlayground.isSelected()){
                     buttonPlayground.setSelected(false);
                 }else{
+                    intent.putExtra("playground", 32);
+                    intent.putExtra("playground2", 41);
                     buttonPlayground.setSelected(true);
                 }
             }
@@ -33,6 +39,7 @@ public class placeActivity extends AppCompatActivity {
                 if(buttonCellar.isSelected()){
                     buttonCellar.setSelected(false);
                 }else{
+                    intent.putExtra("cellar", 39);
                     buttonCellar.setSelected(true);
                 }
             }
@@ -44,6 +51,7 @@ public class placeActivity extends AppCompatActivity {
                 if(buttonFuneral.isSelected()){
                     buttonFuneral.setSelected(false);
                 }else{
+                    intent.putExtra("funeral", 36);
                     buttonFuneral.setSelected(true);
                 }
             }
@@ -55,6 +63,7 @@ public class placeActivity extends AppCompatActivity {
                 if(buttonJungle.isSelected()){
                     buttonJungle.setSelected(false);
                 }else{
+                    intent.putExtra("jungle", 23);
                     buttonJungle.setSelected(true);
                 }
             }
@@ -66,6 +75,7 @@ public class placeActivity extends AppCompatActivity {
                 if(buttonPark.isSelected()){
                     buttonPark.setSelected(false);
                 }else{
+                    intent.putExtra("park", 27);
                     buttonPark.setSelected(true);
                 }
             }
@@ -77,6 +87,7 @@ public class placeActivity extends AppCompatActivity {
                 if(buttonMarket.isSelected()){
                     buttonMarket.setSelected(false);
                 }else{
+                    intent.putExtra("market", 27);
                     buttonMarket.setSelected(true);
                 }
             }
@@ -88,6 +99,9 @@ public class placeActivity extends AppCompatActivity {
                 if(buttonJail.isSelected()){
                     buttonJail.setSelected(false);
                 }else{
+                    intent.putExtra("jail", 8);
+                    intent.putExtra("jail2", 11);
+                    intent.putExtra("jail3", 25);
                     buttonJail.setSelected(true);
                 }
             }
@@ -98,8 +112,35 @@ public class placeActivity extends AppCompatActivity {
                 if(buttonSky.isSelected()){
                     buttonSky.setSelected(false);
                 }else{
+                    intent.putExtra("sky", 1);
+                    intent.putExtra("sky2", 36);
                     buttonSky.setSelected(true);
                 }
+            }
+        });
+        Button buttonShowResult = (Button) findViewById(R.id.result);
+        buttonShowResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
+            }
+        });
+
+        Button buttonGoPrecious = (Button) findViewById(R.id.goPrecious);
+        buttonGoPrecious.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentGoPrecious = new Intent(getApplicationContext(), preciousActivity.class);
+                startActivity(intentGoPrecious);
+            }
+        });
+
+        Button buttonGoColor = (Button) findViewById(R.id.goColor);
+        buttonGoColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentGoColor = new Intent(getApplicationContext(), colorActivity2.class);
+                startActivity(intentGoColor);
             }
         });
 

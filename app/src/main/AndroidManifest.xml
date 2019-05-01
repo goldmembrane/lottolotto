@@ -17,11 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".colorActivity2" />
-        <activity android:name=".placeActivity" />
+        <activity android:name=".placeActivity"  />
         <activity android:name=".foodActivity" />
-        <activity android:name=".animalActivity" />
+        <activity android:name=".animalActivity"/>
         <activity android:name=".preciousActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" >
 
         </activity>
     </application>

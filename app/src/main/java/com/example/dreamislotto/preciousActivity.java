@@ -10,12 +10,15 @@ public class preciousActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_precious);
 
        final Intent intent = new Intent(preciousActivity.this, MainActivity.class);
+
+
 
 
         final Button buttonGod = (Button) findViewById(R.id.god);
@@ -45,6 +48,7 @@ public class preciousActivity extends AppCompatActivity {
                     buttonDragon.setSelected(false);
                 }else{
                     intent.putExtra("dragon",7);
+                    intent.putExtra("dragon2", 24);
                     buttonDragon.setSelected(true);
                 }
             }
@@ -57,6 +61,7 @@ public class preciousActivity extends AppCompatActivity {
                     buttonPray.setSelected(false);
                 }else{
                     intent.putExtra("pray",5);
+                    intent.putExtra("pray2", 11);
                     buttonPray.setSelected(true);
                 }
             }
@@ -83,6 +88,7 @@ public class preciousActivity extends AppCompatActivity {
                     buttonGold.setSelected(false);
                 }else{
                     intent.putExtra("gold",11);
+                    intent.putExtra("gold2", 12);
                     buttonGold.setSelected(true);
                 }
 
@@ -96,6 +102,7 @@ public class preciousActivity extends AppCompatActivity {
                     buttonPrince.setSelected(false);
                 }else{
                     intent.putExtra("prince",27);
+                    intent.putExtra("prince2", 3);
                     buttonPrince.setSelected(true);
                 }
 
@@ -121,6 +128,7 @@ public class preciousActivity extends AppCompatActivity {
                 if(buttonDiamond.isSelected()){
                     buttonDiamond.setSelected(false);
                 }else{
+                    intent.putExtra("diamond2", 3);
                     intent.putExtra("diamond",28);
                     buttonDiamond.setSelected(true);
                 }
@@ -139,9 +147,31 @@ public class preciousActivity extends AppCompatActivity {
 
 
 
+        Button buttonGoPlace = (Button) findViewById(R.id.goPlace);
+        buttonGoPlace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             Intent intentGoPlace = new Intent(getApplicationContext(), placeActivity.class);
+
+             startActivity(intentGoPlace);
+            }
+        });
+        Button buttonGoFood = (Button) findViewById(R.id.goFood);
+        buttonGoFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentGoFood = new Intent(getApplicationContext(), foodActivity.class);
+                startActivity(intentGoFood);
+            }
+        });
+
+
+
 
 
 
     }
+
+
 
 }

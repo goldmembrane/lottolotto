@@ -90,6 +90,22 @@ public class animalActivity extends AppCompatActivity {
                 }
             }
         });
+        Button buttonGoColor2 = (Button) findViewById(R.id.goColor2);
+        buttonGoColor2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentGoColor2 = new Intent(getApplicationContext(), colorActivity2.class);
+                startActivity(intentGoColor2);
+            }
+        });
+        Button buttonGoFood2 = (Button) findViewById(R.id.goFood2);
+        buttonGoFood2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentGoFood2 = new Intent(getApplicationContext(), foodActivity.class);
+                startActivity(intentGoFood2);
+            }
+        });
 
     }
 }
