@@ -23,6 +23,8 @@ public class foodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonTofu.isSelected()){
                     buttonTofu.setSelected(false);
+                    intent.removeExtra("tofu");
+                    intent.removeExtra("tofu2");
                 }else{
                     intent.putExtra("tofu", 4);
                     intent.putExtra("tofu2", 5);
@@ -36,6 +38,7 @@ public class foodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonBanana.isSelected()){
                     buttonBanana.setSelected(false);
+                    intent.removeExtra("banana");
                 }else{
                     intent.putExtra("banana", 6);
                     buttonBanana.setSelected(true);
@@ -48,6 +51,7 @@ public class foodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonCoffee.isSelected()){
                     buttonCoffee.setSelected(false);
+                    intent.removeExtra("coffee");
                 }else{
                     intent.putExtra("coffee", 7);
                     buttonCoffee.setSelected(true);
@@ -60,6 +64,8 @@ public class foodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonEgg.isSelected()){
                     buttonEgg.setSelected(false);
+                    intent.removeExtra("egg");
+                    intent.removeExtra("egg2");
                 }else{
                     intent.putExtra("egg", 8);
                     intent.putExtra("egg2", 10);
@@ -73,6 +79,7 @@ public class foodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonGarlic.isSelected()){
                     buttonGarlic.setSelected(false);
+                    intent.removeExtra("garlic");
                 }else{
                     intent.putExtra("garlic", 14);
                     buttonGarlic.setSelected(true);
@@ -85,6 +92,9 @@ public class foodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonOrange.isSelected()){
                     buttonOrange.setSelected(false);
+                    intent.removeExtra("orange");
+                    intent.removeExtra("orange2");
+                    intent.removeExtra("orange3");
                 }else{
                     intent.putExtra("orange", 5);
                     intent.putExtra("orange2", 18);
@@ -99,6 +109,7 @@ public class foodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonPeach.isSelected()){
                     buttonPeach.setSelected(false);
+                    intent.removeExtra("peach");
                 }else{
                     intent.putExtra("peach", 28);
                     buttonPeach.setSelected(true);
@@ -111,6 +122,8 @@ public class foodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonChicken.isSelected()){
                     buttonChicken.setSelected(false);
+                    intent.removeExtra("chicken");
+                    intent.removeExtra("chicken2");
                 }else{
                     intent.putExtra("chicken", 10);
                     intent.putExtra("chicken2", 21);

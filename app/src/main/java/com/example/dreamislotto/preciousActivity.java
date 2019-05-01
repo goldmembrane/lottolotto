@@ -30,6 +30,7 @@ public class preciousActivity extends AppCompatActivity {
 
                 if(buttonGod.isSelected()){
                     buttonGod.setSelected(false);
+                    intent.removeExtra("god");
                 }else{
                     intent.putExtra("god",1);
                     buttonGod.setSelected(true);
@@ -46,6 +47,8 @@ public class preciousActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonDragon.isSelected()){
                     buttonDragon.setSelected(false);
+                    intent.removeExtra("dragon");
+                    intent.removeExtra("dragon2");
                 }else{
                     intent.putExtra("dragon",7);
                     intent.putExtra("dragon2", 24);
@@ -59,6 +62,8 @@ public class preciousActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonPray.isSelected()){
                     buttonPray.setSelected(false);
+                    intent.removeExtra("pray");
+                    intent.removeExtra("pray2");
                 }else{
                     intent.putExtra("pray",5);
                     intent.putExtra("pray2", 11);
@@ -72,6 +77,7 @@ public class preciousActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonPastor.isSelected()){
                     buttonPastor.setSelected(false);
+                    intent.removeExtra("pastor");
                 }else{
 
                     intent.putExtra("pastor",21);
@@ -86,6 +92,8 @@ public class preciousActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonGold.isSelected()){
                     buttonGold.setSelected(false);
+                    intent.removeExtra("gold");
+                    intent.removeExtra("gold2");
                 }else{
                     intent.putExtra("gold",11);
                     intent.putExtra("gold2", 12);
@@ -100,6 +108,8 @@ public class preciousActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonPrince.isSelected()){
                     buttonPrince.setSelected(false);
+                    intent.removeExtra("prince");
+                    intent.removeExtra("prince2");
                 }else{
                     intent.putExtra("prince",27);
                     intent.putExtra("prince2", 3);
@@ -114,6 +124,7 @@ public class preciousActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonCross.isSelected()){
                     buttonCross.setSelected(false);
+                    intent.removeExtra("cross");
                 }else{
                     intent.putExtra("cross",10);
                     buttonCross.setSelected(true);
@@ -127,6 +138,8 @@ public class preciousActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonDiamond.isSelected()){
                     buttonDiamond.setSelected(false);
+                    intent.removeExtra("diamond");
+                    intent.removeExtra("diamond2");
                 }else{
                     intent.putExtra("diamond2", 3);
                     intent.putExtra("diamond",28);

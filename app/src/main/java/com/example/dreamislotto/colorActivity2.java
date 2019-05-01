@@ -21,6 +21,7 @@ public class colorActivity2 extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonRed.isSelected()){
                     buttonRed.setSelected(false);
+                    intent.removeExtra("red");
                 }else{
                     intent.putExtra("red", 1);
                     buttonRed.setSelected(true);
@@ -33,6 +34,7 @@ public class colorActivity2 extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonYellow.isSelected()){
                     buttonYellow.setSelected(false);
+                    intent.removeExtra("yellow");
                 }else{
                     intent.putExtra("yellow", 3);
                     buttonYellow.setSelected(true);
@@ -45,6 +47,10 @@ public class colorActivity2 extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonBlack.isSelected()){
                     buttonBlack.setSelected(false);
+                    intent.removeExtra("black");
+                    intent.removeExtra("black2");
+                    intent.removeExtra("black3");
+                    intent.removeExtra("black4");
                 }else{
                     intent.putExtra("black", 8);
                     intent.putExtra("black2", 9);
@@ -60,6 +66,8 @@ public class colorActivity2 extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonBlue.isSelected()){
                     buttonBlue.setSelected(false);
+                    intent.removeExtra("blue");
+                    intent.removeExtra("blue2");
                 }else{
                     intent.putExtra("blue", 5);
                     intent.putExtra("blue2", 32);
@@ -73,6 +81,7 @@ public class colorActivity2 extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonSilver.isSelected()){
                     buttonSilver.setSelected(false);
+                    intent.removeExtra("silver");
                 }else{
                     intent.putExtra("silver", 17);
                     buttonSilver.setSelected(true);
@@ -85,6 +94,8 @@ public class colorActivity2 extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonWhite.isSelected()){
                     buttonWhite.setSelected(false);
+                    intent.removeExtra("white");
+                    intent.removeExtra("white2");
                 }else{
                     intent.putExtra("white", 38);
                     intent.putExtra("white2", 39);
@@ -98,6 +109,7 @@ public class colorActivity2 extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonGreen.isSelected()){
                     buttonGreen.setSelected(false);
+                    intent.removeExtra("green");
                 }else{
                     intent.putExtra("green", 4);
                     buttonGreen.setSelected(true);
@@ -110,6 +122,7 @@ public class colorActivity2 extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonPurple.isSelected()){
                     buttonPurple.setSelected(false);
+                    intent.removeExtra("purple");
                 }else{
                     intent.putExtra("purple", 7);
                     buttonPurple.setSelected(true);

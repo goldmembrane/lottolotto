@@ -21,6 +21,8 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonTiger.isSelected()){
                     buttonTiger.setSelected(false);
+                    intent.removeExtra("tiger");
+                    intent.removeExtra("tiger2");
                 }else{
                     intent.putExtra("tiger", 3);
                     intent.putExtra("tiger2", 13);
@@ -34,6 +36,8 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonSnake.isSelected()){
                     buttonSnake.setSelected(false);
+                    intent.removeExtra("snake");
+                    intent.removeExtra("snake2");
                 }else{
                     intent.putExtra("snake", 4);
                     intent.putExtra("snake2", 10);
@@ -47,6 +51,8 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonMonkey.isSelected()){
                     buttonMonkey.setSelected(false);
+                    intent.removeExtra("monkey");
+                    intent.removeExtra("monkey2");
                 }else{
                     intent.putExtra("monkey", 9);
                     intent.putExtra("monkey2", 39);
@@ -60,6 +66,8 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonPig.isSelected()){
                     buttonPig.setSelected(false);
+                    intent.removeExtra("pig");
+                    intent.removeExtra("pig2");
                 }else{
                     intent.putExtra("pig", 8);
                     intent.putExtra("pig2", 12);
@@ -73,6 +81,9 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonBear.isSelected()){
                     buttonBear.setSelected(false);
+                    intent.removeExtra("bear");
+                    intent.removeExtra("bear2");
+                    intent.removeExtra("bear3");
                 }else{
                     intent.putExtra("bear", 1);
                     intent.putExtra("bear2", 8);
@@ -87,6 +98,7 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonOwl.isSelected()){
                     buttonOwl.setSelected(false);
+                    intent.removeExtra("owl");
                 }else{
                     intent.putExtra("owl", 37);
                     buttonOwl.setSelected(true);
@@ -99,6 +111,8 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonTurkey.isSelected()){
                     buttonTurkey.setSelected(false);
+                    intent.removeExtra("turkey");
+                    intent.removeExtra("turkey2");
                 }else{
                     intent.putExtra("turkey", 7);
                     intent.putExtra("turkey2", 26);
@@ -112,6 +126,7 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonPigeon.isSelected()){
                     buttonPigeon.setSelected(false);
+                    intent.removeExtra("pigeon");
                 }else{
                     intent.putExtra("pigeon", 9);
                     buttonPigeon.setSelected(true);

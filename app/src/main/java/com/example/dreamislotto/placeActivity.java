@@ -25,6 +25,8 @@ public class placeActivity extends AppCompatActivity {
 
                 if(buttonPlayground.isSelected()){
                     buttonPlayground.setSelected(false);
+                    intent.removeExtra("playground");
+                    intent.removeExtra("playground2");
                 }else{
                     intent.putExtra("playground", 32);
                     intent.putExtra("playground2", 41);
@@ -38,6 +40,7 @@ public class placeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonCellar.isSelected()){
                     buttonCellar.setSelected(false);
+                    intent.removeExtra("cellar");
                 }else{
                     intent.putExtra("cellar", 39);
                     buttonCellar.setSelected(true);
@@ -50,6 +53,7 @@ public class placeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonFuneral.isSelected()){
                     buttonFuneral.setSelected(false);
+                    intent.removeExtra("funeral");
                 }else{
                     intent.putExtra("funeral", 36);
                     buttonFuneral.setSelected(true);
@@ -62,6 +66,7 @@ public class placeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonJungle.isSelected()){
                     buttonJungle.setSelected(false);
+                    intent.removeExtra("jungle");
                 }else{
                     intent.putExtra("jungle", 23);
                     buttonJungle.setSelected(true);
@@ -74,6 +79,7 @@ public class placeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonPark.isSelected()){
                     buttonPark.setSelected(false);
+                    intent.removeExtra("park");
                 }else{
                     intent.putExtra("park", 27);
                     buttonPark.setSelected(true);
@@ -86,6 +92,7 @@ public class placeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonMarket.isSelected()){
                     buttonMarket.setSelected(false);
+                    intent.removeExtra("market");
                 }else{
                     intent.putExtra("market", 27);
                     buttonMarket.setSelected(true);
@@ -98,6 +105,9 @@ public class placeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonJail.isSelected()){
                     buttonJail.setSelected(false);
+                    intent.removeExtra("jail");
+                    intent.removeExtra("jail2");
+                    intent.removeExtra("jail3");
                 }else{
                     intent.putExtra("jail", 8);
                     intent.putExtra("jail2", 11);
@@ -111,6 +121,8 @@ public class placeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonSky.isSelected()){
                     buttonSky.setSelected(false);
+                    intent.removeExtra("sky");
+                    intent.removeExtra("sky2");
                 }else{
                     intent.putExtra("sky", 1);
                     intent.putExtra("sky2", 36);
