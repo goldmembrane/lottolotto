@@ -121,7 +121,7 @@ public class animalActivity extends AppCompatActivity {
             }
         });
         final Button buttonPigeon = (Button) findViewById(R.id.pigeon);
-        buttonTurkey.setOnClickListener(new View.OnClickListener() {
+        buttonPigeon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(buttonPigeon.isSelected()){
