@@ -1,4 +1,4 @@
-package com.example.dreamislotto;
+package com.dream.dreamislotto;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,18 +6,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 public class preciousActivity extends AppCompatActivity {
 
-
+    private AdView mAdView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_precious);
+        MobileAds.initialize(this, "ca-app-pub-8799724102859231~7332614513");
 
-        final Intent intentByPlace = getIntent();
-        final Intent intentByFood = getIntent();
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
        final Intent intentPrecious = new Intent(preciousActivity.this, MainActivity.class);
 
 
@@ -158,8 +164,6 @@ public class preciousActivity extends AppCompatActivity {
         buttonShowResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intentByFood);
-                startActivity(intentByPlace);
                 startActivity(intentPrecious);
             }
         });

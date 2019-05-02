@@ -1,4 +1,4 @@
-package com.example.dreamislotto;
+package com.dream.dreamislotto;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.dreamislotto", appContext.getPackageName());
+        assertEquals("com.sleepdream.dreamislotto", appContext.getPackageName());
     }
 }

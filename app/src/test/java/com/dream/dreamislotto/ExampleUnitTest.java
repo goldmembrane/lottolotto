@@ -1,4 +1,4 @@
-package com.example.dreamislotto;
+package com.dream.dreamislotto;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.dreamislotto;
+package com.dream.dreamislotto;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,14 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class colorActivity2 extends AppCompatActivity {
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
+public class colorActivity2 extends AppCompatActivity {
+    private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color2);
-        final Intent intentByAnimal = getIntent();
-        final Intent intentByPlace = getIntent();
+        MobileAds.initialize(this, "ca-app-pub-8799724102859231~7332614513");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         final Intent intentColor = new Intent(colorActivity2.this, MainActivity.class);
 
 
@@ -136,8 +142,6 @@ public class colorActivity2 extends AppCompatActivity {
         buttonShowResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intentByAnimal);
-                startActivity(intentByPlace);
                 startActivity(intentColor);
             }
         });

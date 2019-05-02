@@ -1,4 +1,4 @@
-package com.example.dreamislotto;
+package com.dream.dreamislotto;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,19 +7,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Collection;
-import java.util.Collections;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
-
+    private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        MobileAds.initialize(this, "ca-app-pub-8799724102859231~7332614513");
 
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         Intent intentPrecious = getIntent();
         Intent intentPlace = getIntent();
         Intent intentColor = getIntent();
