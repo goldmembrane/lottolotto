@@ -13,8 +13,10 @@ public class placeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place);
 
+        final Intent intentByColor = getIntent();
+        final Intent intentByPrecious = getIntent();
+        final Intent intentPlace = new Intent(placeActivity.this, MainActivity.class);
 
-        final Intent intent = new Intent(placeActivity.this, MainActivity.class);
 
 
         final Button buttonPlayground = (Button) findViewById(R.id.playground);
@@ -25,11 +27,11 @@ public class placeActivity extends AppCompatActivity {
 
                 if(buttonPlayground.isSelected()){
                     buttonPlayground.setSelected(false);
-                    intent.removeExtra("playground");
-                    intent.removeExtra("playground2");
+                    intentPlace.removeExtra("playground");
+                    intentPlace.removeExtra("playground2");
                 }else{
-                    intent.putExtra("playground", 32);
-                    intent.putExtra("playground2", 41);
+                    intentPlace.putExtra("playground", 32);
+                    intentPlace.putExtra("playground2", 41);
                     buttonPlayground.setSelected(true);
                 }
             }
@@ -40,9 +42,9 @@ public class placeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonCellar.isSelected()){
                     buttonCellar.setSelected(false);
-                    intent.removeExtra("cellar");
+                    intentPlace.removeExtra("cellar");
                 }else{
-                    intent.putExtra("cellar", 39);
+                    intentPlace.putExtra("cellar", 39);
                     buttonCellar.setSelected(true);
                 }
             }
@@ -53,9 +55,9 @@ public class placeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonFuneral.isSelected()){
                     buttonFuneral.setSelected(false);
-                    intent.removeExtra("funeral");
+                    intentPlace.removeExtra("funeral");
                 }else{
-                    intent.putExtra("funeral", 36);
+                    intentPlace.putExtra("funeral", 36);
                     buttonFuneral.setSelected(true);
                 }
             }
@@ -66,9 +68,9 @@ public class placeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonJungle.isSelected()){
                     buttonJungle.setSelected(false);
-                    intent.removeExtra("jungle");
+                    intentPlace.removeExtra("jungle");
                 }else{
-                    intent.putExtra("jungle", 23);
+                    intentPlace.putExtra("jungle", 23);
                     buttonJungle.setSelected(true);
                 }
             }
@@ -79,9 +81,9 @@ public class placeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonPark.isSelected()){
                     buttonPark.setSelected(false);
-                    intent.removeExtra("park");
+                    intentPlace.removeExtra("park");
                 }else{
-                    intent.putExtra("park", 27);
+                    intentPlace.putExtra("park", 27);
                     buttonPark.setSelected(true);
                 }
             }
@@ -92,9 +94,9 @@ public class placeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonMarket.isSelected()){
                     buttonMarket.setSelected(false);
-                    intent.removeExtra("market");
+                    intentPlace.removeExtra("market");
                 }else{
-                    intent.putExtra("market", 27);
+                    intentPlace.putExtra("market", 27);
                     buttonMarket.setSelected(true);
                 }
             }
@@ -105,13 +107,13 @@ public class placeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonJail.isSelected()){
                     buttonJail.setSelected(false);
-                    intent.removeExtra("jail");
-                    intent.removeExtra("jail2");
-                    intent.removeExtra("jail3");
+                    intentPlace.removeExtra("jail");
+                    intentPlace.removeExtra("jail2");
+                    intentPlace.removeExtra("jail3");
                 }else{
-                    intent.putExtra("jail", 8);
-                    intent.putExtra("jail2", 11);
-                    intent.putExtra("jail3", 25);
+                    intentPlace.putExtra("jail", 8);
+                    intentPlace.putExtra("jail2", 11);
+                    intentPlace.putExtra("jail3", 25);
                     buttonJail.setSelected(true);
                 }
             }
@@ -121,11 +123,11 @@ public class placeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonSky.isSelected()){
                     buttonSky.setSelected(false);
-                    intent.removeExtra("sky");
-                    intent.removeExtra("sky2");
+                    intentPlace.removeExtra("sky");
+                    intentPlace.removeExtra("sky2");
                 }else{
-                    intent.putExtra("sky", 1);
-                    intent.putExtra("sky2", 36);
+                    intentPlace.putExtra("sky", 1);
+                    intentPlace.putExtra("sky2", 36);
                     buttonSky.setSelected(true);
                 }
             }
@@ -134,7 +136,9 @@ public class placeActivity extends AppCompatActivity {
         buttonShowResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intent);
+                startActivity(intentByColor);
+                startActivity(intentByPrecious);
+                startActivity(intentPlace);
             }
         });
 
@@ -142,8 +146,10 @@ public class placeActivity extends AppCompatActivity {
         buttonGoPrecious.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(intentPlace);
                 Intent intentGoPrecious = new Intent(getApplicationContext(), preciousActivity.class);
                 startActivity(intentGoPrecious);
+
             }
         });
 
@@ -151,8 +157,10 @@ public class placeActivity extends AppCompatActivity {
         buttonGoColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(intentPlace);
                 Intent intentGoColor = new Intent(getApplicationContext(), colorActivity2.class);
                 startActivity(intentGoColor);
+
             }
         });
 

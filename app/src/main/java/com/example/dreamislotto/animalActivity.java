@@ -12,8 +12,12 @@ public class animalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animal);
+        final Intent intentByFood = getIntent();
+        final Intent intentByColor = getIntent();
+        final Intent intentAnimal = new Intent(animalActivity.this, MainActivity.class);
 
-        final Intent intent = new Intent(animalActivity.this, MainActivity.class);
+
+
 
         final Button buttonTiger = (Button) findViewById(R.id.Tiger);
         buttonTiger.setOnClickListener(new View.OnClickListener() {
@@ -21,11 +25,11 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonTiger.isSelected()){
                     buttonTiger.setSelected(false);
-                    intent.removeExtra("tiger");
-                    intent.removeExtra("tiger2");
+                    intentAnimal.removeExtra("tiger");
+                    intentAnimal.removeExtra("tiger2");
                 }else{
-                    intent.putExtra("tiger", 3);
-                    intent.putExtra("tiger2", 13);
+                    intentAnimal.putExtra("tiger", 3);
+                    intentAnimal.putExtra("tiger2", 13);
                     buttonTiger.setSelected(true);
                 }
             }
@@ -36,11 +40,11 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonSnake.isSelected()){
                     buttonSnake.setSelected(false);
-                    intent.removeExtra("snake");
-                    intent.removeExtra("snake2");
+                    intentAnimal.removeExtra("snake");
+                    intentAnimal.removeExtra("snake2");
                 }else{
-                    intent.putExtra("snake", 4);
-                    intent.putExtra("snake2", 10);
+                    intentAnimal.putExtra("snake", 4);
+                    intentAnimal.putExtra("snake2", 10);
                     buttonSnake.setSelected(true);
                 }
             }
@@ -51,11 +55,11 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonMonkey.isSelected()){
                     buttonMonkey.setSelected(false);
-                    intent.removeExtra("monkey");
-                    intent.removeExtra("monkey2");
+                    intentAnimal.removeExtra("monkey");
+                    intentAnimal.removeExtra("monkey2");
                 }else{
-                    intent.putExtra("monkey", 9);
-                    intent.putExtra("monkey2", 39);
+                    intentAnimal.putExtra("monkey", 9);
+                    intentAnimal.putExtra("monkey2", 39);
                     buttonMonkey.setSelected(true);
                 }
             }
@@ -66,11 +70,11 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonPig.isSelected()){
                     buttonPig.setSelected(false);
-                    intent.removeExtra("pig");
-                    intent.removeExtra("pig2");
+                    intentAnimal.removeExtra("pig");
+                    intentAnimal.removeExtra("pig2");
                 }else{
-                    intent.putExtra("pig", 8);
-                    intent.putExtra("pig2", 12);
+                    intentAnimal.putExtra("pig", 8);
+                    intentAnimal.putExtra("pig2", 12);
                     buttonPig.setSelected(true);
                 }
             }
@@ -81,13 +85,13 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonBear.isSelected()){
                     buttonBear.setSelected(false);
-                    intent.removeExtra("bear");
-                    intent.removeExtra("bear2");
-                    intent.removeExtra("bear3");
+                    intentAnimal.removeExtra("bear");
+                    intentAnimal.removeExtra("bear2");
+                    intentAnimal.removeExtra("bear3");
                 }else{
-                    intent.putExtra("bear", 1);
-                    intent.putExtra("bear2", 8);
-                    intent.putExtra("bear3", 16);
+                    intentAnimal.putExtra("bear", 1);
+                    intentAnimal.putExtra("bear2", 8);
+                    intentAnimal.putExtra("bear3", 16);
                     buttonBear.setSelected(true);
                 }
             }
@@ -98,9 +102,9 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonOwl.isSelected()){
                     buttonOwl.setSelected(false);
-                    intent.removeExtra("owl");
+                    intentAnimal.removeExtra("owl");
                 }else{
-                    intent.putExtra("owl", 37);
+                    intentAnimal.putExtra("owl", 37);
                     buttonOwl.setSelected(true);
                 }
             }
@@ -111,11 +115,11 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonTurkey.isSelected()){
                     buttonTurkey.setSelected(false);
-                    intent.removeExtra("turkey");
-                    intent.removeExtra("turkey2");
+                    intentAnimal.removeExtra("turkey");
+                    intentAnimal.removeExtra("turkey2");
                 }else{
-                    intent.putExtra("turkey", 7);
-                    intent.putExtra("turkey2", 26);
+                    intentAnimal.putExtra("turkey", 7);
+                    intentAnimal.putExtra("turkey2", 26);
                     buttonTurkey.setSelected(true);
                 }
             }
@@ -126,9 +130,9 @@ public class animalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(buttonPigeon.isSelected()){
                     buttonPigeon.setSelected(false);
-                    intent.removeExtra("pigeon");
+                    intentAnimal.removeExtra("pigeon");
                 }else{
-                    intent.putExtra("pigeon", 9);
+                    intentAnimal.putExtra("pigeon", 9);
                     buttonPigeon.setSelected(true);
                 }
             }
@@ -137,23 +141,29 @@ public class animalActivity extends AppCompatActivity {
         buttonShowResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intent);
+                startActivity(intentByColor);
+                startActivity(intentByFood);
+                startActivity(intentAnimal);
             }
         });
         Button buttonGoColor2 = (Button) findViewById(R.id.goColor2);
         buttonGoColor2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(intentAnimal);
                 Intent intentGoColor2 = new Intent(getApplicationContext(), colorActivity2.class);
                 startActivity(intentGoColor2);
+
             }
         });
         Button buttonGoFood2 = (Button) findViewById(R.id.goFood2);
         buttonGoFood2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(intentAnimal);
                 Intent intentGoFood2 = new Intent(getApplicationContext(), foodActivity.class);
                 startActivity(intentGoFood2);
+
             }
         });
 
