@@ -14,6 +14,11 @@ import com.google.android.gms.ads.MobileAds;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+/**
+ * 각각의 꿈들에 대해 넘어온 숫자(값)를 결과 창에 표시하는 화면(액티비티)이다.
+ * @author ByeongHyun Hwang
+ * @version 1.0.1
+ */
 
 public class MainActivity extends AppCompatActivity {
     private AdView mAdView;
@@ -27,13 +32,18 @@ public class MainActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
+        /**
+         * 각각 화면에서 넘어온 숫자(값)을 받는 도구이다.
+         */
         Intent intentPrecious = getIntent();
         Intent intentPlace = getIntent();
         Intent intentColor = getIntent();
         Intent intentFood = getIntent();
         Intent intentAnimal = getIntent();
 
-
+        /**
+         * 받아온 숫자들을 표시하는 TextView이다.
+         */
         TextView textView = (TextView)findViewById(R.id.mainTextView);
 
         int no1 = intentPrecious.getIntExtra("god", 0);
@@ -104,11 +114,9 @@ public class MainActivity extends AppCompatActivity {
         int no66 = intentAnimal.getIntExtra("pigeon", 0);
 
 
-
-
-
-
-
+        /**
+         * 중복된 값들을 0 하나만 남기고 모두 제거한다.
+         */
         Set<Integer> set = new HashSet<>();
         set.add(no1);
         set.add(no2);
@@ -177,9 +185,9 @@ public class MainActivity extends AppCompatActivity {
         set.add(no65);
         set.add(no66);
 
-
-
-
+        /**
+         * 선택 안되서 불필요하게 넘어온 0값을 제거한다.
+         */
         for(Iterator<Integer> it = set.iterator() ; it.hasNext() ; )
         {
             Integer value = it.next();
@@ -190,17 +198,22 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-
-
+        /**
+         * textView에 위에서 일련의 처리과정을 마친 숫자들을 표시한다.
+         */
         textView.setText(String.valueOf(set));
 
-
+        /**
+         * 다시 하고 싶으면 귀중품 화면으로 돌아가게 만드는 버튼이다.
+         */
         Button buttonGoBack = (Button) findViewById(R.id.goBack);
         buttonGoBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /**
+                 * 클릭 시 귀중품관련 꿈 화면으로 돌아간다.
+                 */
                 Intent intentGoBack = new Intent(getApplicationContext(), preciousActivity.class);
-
                 startActivity(intentGoBack);
                 finish();
             }

@@ -10,6 +10,11 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
+/**
+ * 음식 관련 꿈들에 대한 각각의 숫자를 버튼을 클릭하여 선택할 수 있다.
+ * @author ByeongHyun Hwang
+ * @version 1.0.1
+ */
 public class foodActivity extends AppCompatActivity {
     private AdView mAdView;
 
@@ -24,8 +29,15 @@ public class foodActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
+        /**
+         * 결과 화면에 값을 전달하기 위한 인텐트 설정
+         */
         final Intent intentFood = new Intent(foodActivity.this, MainActivity.class);
 
+        /**
+         * 클릭하면 두부에 해당하는 숫자(값)를 넘겨주는 버튼
+         * 눌린 상태에서 한번 더 클릭하면 해제되면서 넘겨줄 숫자(값)를 지운다.
+         */
         final Button buttonTofu = (Button) findViewById(R.id.tofu);
         buttonTofu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +53,11 @@ public class foodActivity extends AppCompatActivity {
                 }
             }
         });
+
+        /**
+         * 클릭하면 바나나에 해당하는 숫자(값)를 넘겨주는 버튼
+         * 눌린 상태에서 한번 더 클릭하면 해제되면서 넘겨줄 숫자(값)를 지운다.
+         */
         final Button buttonBanana = (Button) findViewById(R.id.banana);
         buttonBanana.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +71,11 @@ public class foodActivity extends AppCompatActivity {
                 }
             }
         });
+
+        /**
+         * 클릭하면 커피에 해당하는 숫자(값)를 넘겨주는 버튼
+         * 눌린 상태에서 한번 더 클릭하면 해제되면서 넘겨줄 숫자(값)를 지운다.
+         */
         final Button buttonCoffee = (Button) findViewById(R.id.coffee);
         buttonCoffee.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +89,11 @@ public class foodActivity extends AppCompatActivity {
                 }
             }
         });
+
+        /**
+         * 클릭하면 달걀에 해당하는 숫자(값)를 넘겨주는 버튼
+         * 눌린 상태에서 한번 더 클릭하면 해제되면서 넘겨줄 숫자(값)를 지운다.
+         */
         final Button buttonEgg = (Button) findViewById(R.id.egg);
         buttonEgg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +109,11 @@ public class foodActivity extends AppCompatActivity {
                 }
             }
         });
+
+        /**
+         * 클릭하면 마늘에 해당하는 숫자(값)를 넘겨주는 버튼
+         * 눌린 상태에서 한번 더 클릭하면 해제되면서 넘겨줄 숫자(값)를 지운다.
+         */
         final Button buttonGarlic = (Button) findViewById(R.id.garlic);
         buttonGarlic.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,6 +127,11 @@ public class foodActivity extends AppCompatActivity {
                 }
             }
         });
+
+        /**
+         * 클릭하면 귤에 해당하는 숫자(값)를 넘겨주는 버튼
+         * 눌린 상태에서 한번 더 클릭하면 해제되면서 넘겨줄 숫자(값)를 지운다.
+         */
         final Button buttonOrange = (Button) findViewById(R.id.orange);
         buttonOrange.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,6 +149,11 @@ public class foodActivity extends AppCompatActivity {
                 }
             }
         });
+
+        /**
+         * 클릭하면 복숭아에 해당하는 숫자(값)를 넘겨주는 버튼
+         * 눌린 상태에서 한번 더 클릭하면 해제되면서 넘겨줄 숫자(값)를 지운다.
+         */
         final Button buttonPeach = (Button) findViewById(R.id.peach);
         buttonPeach.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,6 +167,11 @@ public class foodActivity extends AppCompatActivity {
                 }
             }
         });
+
+        /**
+         * 클릭하면 닭고기에 해당하는 숫자(값)를 넘겨주는 버튼
+         * 눌린 상태에서 한번 더 클릭하면 해제되면서 넘겨줄 숫자(값)를 지운다.
+         */
         final Button buttonChicken = (Button) findViewById(R.id.chicken);
         buttonChicken.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,6 +188,10 @@ public class foodActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * 클릭하면 각각 속성에서 받은 숫자(값)를 결과 화면에 표시되도록 넘겨주는 버튼
+         * 클릭 시 결과 화면으로 이동한다.
+         */
         Button buttonShowResult = (Button) findViewById(R.id.result);
         buttonShowResult.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,22 +200,36 @@ public class foodActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        /**
+         * 클릭 시 귀중품관련 꿈 화면으로 넘어가는 버튼
+         */
         Button buttonGoPrecious2 = (Button) findViewById(R.id.goPrecious2);
         buttonGoPrecious2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                /**
+                 * 클릭 시 귀중품관련 꿈 화면으로 넘어간다
+                 */
                 Intent intentGoPrecious2 = new Intent(getApplicationContext(), preciousActivity.class);
                 startActivity(intentGoPrecious2);
                 finish();
 
             }
         });
+
+        /**
+         * 클릭 시 동물관련 꿈 화면으로 넘어가는 버튼
+         */
         Button buttonGoAnimal2 = (Button) findViewById(R.id.goAnimal2);
         buttonGoAnimal2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                /**
+                 * 클릭 시 동물관련 꿈 화면으로 넘어간다
+                 */
                 Intent intentGoAnimal2 = new Intent(getApplicationContext(), animalActivity.class);
                 startActivity(intentGoAnimal2);
                 finish();
