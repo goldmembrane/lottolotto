@@ -18,9 +18,10 @@ public class placeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_place);
         MobileAds.initialize(this, "ca-app-pub-8799724102859231~7332614513");
 
-        mAdView = findViewById(R.id.adView);
+        mAdView = findViewById(R.id.adViewPlace);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
         final Intent intentPlace = new Intent(placeActivity.this, MainActivity.class);
 
 
@@ -143,6 +144,7 @@ public class placeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentPlace);
+                finish();
             }
         });
 
@@ -150,9 +152,10 @@ public class placeActivity extends AppCompatActivity {
         buttonGoPrecious.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intentPlace);
+
                 Intent intentGoPrecious = new Intent(getApplicationContext(), preciousActivity.class);
                 startActivity(intentGoPrecious);
+                finish();
 
             }
         });
@@ -161,9 +164,9 @@ public class placeActivity extends AppCompatActivity {
         buttonGoColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intentPlace);
                 Intent intentGoColor = new Intent(getApplicationContext(), colorActivity2.class);
                 startActivity(intentGoColor);
+                finish();
 
             }
         });

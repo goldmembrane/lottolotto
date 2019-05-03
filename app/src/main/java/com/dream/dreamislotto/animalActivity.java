@@ -20,7 +20,7 @@ public class animalActivity extends AppCompatActivity {
 
         final Intent intentAnimal = new Intent(animalActivity.this, MainActivity.class);
 
-        mAdView = findViewById(R.id.adView);
+        mAdView = findViewById(R.id.adViewAnimal);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
@@ -149,15 +149,17 @@ public class animalActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentAnimal);
+                finish();
             }
         });
         Button buttonGoColor2 = (Button) findViewById(R.id.goColor2);
         buttonGoColor2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intentAnimal);
+
                 Intent intentGoColor2 = new Intent(getApplicationContext(), colorActivity2.class);
                 startActivity(intentGoColor2);
+                finish();
 
             }
         });
@@ -165,9 +167,10 @@ public class animalActivity extends AppCompatActivity {
         buttonGoFood2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intentAnimal);
+
                 Intent intentGoFood2 = new Intent(getApplicationContext(), foodActivity.class);
                 startActivity(intentGoFood2);
+                finish();
 
             }
         });

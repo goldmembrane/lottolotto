@@ -21,7 +21,7 @@ public class preciousActivity extends AppCompatActivity {
         setContentView(R.layout.activity_precious);
         MobileAds.initialize(this, "ca-app-pub-8799724102859231~7332614513");
 
-        mAdView = findViewById(R.id.adView);
+        mAdView = findViewById(R.id.adViewPrecious);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
        final Intent intentPrecious = new Intent(preciousActivity.this, MainActivity.class);
@@ -165,6 +165,7 @@ public class preciousActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentPrecious);
+                finish();
             }
         });
 
@@ -174,9 +175,10 @@ public class preciousActivity extends AppCompatActivity {
         buttonGoPlace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intentPrecious);
+
                 Intent intentGoPlace = new Intent(getApplicationContext(), placeActivity.class);
                 startActivity(intentGoPlace);
+                finish();
 
             }
         });
@@ -184,10 +186,10 @@ public class preciousActivity extends AppCompatActivity {
         buttonGoFood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intentPrecious);
+
                 Intent intentGoFood = new Intent(getApplicationContext(), foodActivity.class);
                 startActivity(intentGoFood);
-
+                finish();
             }
         });
 

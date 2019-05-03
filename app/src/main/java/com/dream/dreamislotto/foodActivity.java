@@ -17,10 +17,13 @@ public class foodActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
+
         MobileAds.initialize(this, "ca-app-pub-8799724102859231~7332614513");
-        mAdView = findViewById(R.id.adView);
+
+        mAdView = findViewById(R.id.adViewFood);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
         final Intent intentFood = new Intent(foodActivity.this, MainActivity.class);
 
         final Button buttonTofu = (Button) findViewById(R.id.tofu);
@@ -143,15 +146,17 @@ public class foodActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentFood);
+                finish();
             }
         });
         Button buttonGoPrecious2 = (Button) findViewById(R.id.goPrecious2);
         buttonGoPrecious2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intentFood);
+
                 Intent intentGoPrecious2 = new Intent(getApplicationContext(), preciousActivity.class);
                 startActivity(intentGoPrecious2);
+                finish();
 
             }
         });
@@ -159,10 +164,10 @@ public class foodActivity extends AppCompatActivity {
         buttonGoAnimal2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intentFood);
+
                 Intent intentGoAnimal2 = new Intent(getApplicationContext(), animalActivity.class);
                 startActivity(intentGoAnimal2);
-
+                finish();
             }
         });
     }

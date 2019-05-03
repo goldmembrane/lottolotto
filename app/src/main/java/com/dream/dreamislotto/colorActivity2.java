@@ -17,9 +17,11 @@ public class colorActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color2);
         MobileAds.initialize(this, "ca-app-pub-8799724102859231~7332614513");
-        mAdView = findViewById(R.id.adView);
+
+        mAdView = findViewById(R.id.adViewColor);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
         final Intent intentColor = new Intent(colorActivity2.this, MainActivity.class);
 
 
@@ -143,6 +145,7 @@ public class colorActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentColor);
+                finish();
             }
         });
 
@@ -150,9 +153,10 @@ public class colorActivity2 extends AppCompatActivity {
         buttonGoPlace2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intentColor);
+
                 Intent intentGoPlace2 = new Intent(getApplicationContext(), placeActivity.class);
                 startActivity(intentGoPlace2);
+                finish();
 
             }
         });
@@ -160,9 +164,10 @@ public class colorActivity2 extends AppCompatActivity {
         buttonGoAnimal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intentColor);
+
                 Intent intentGoAnimal = new Intent(getApplicationContext(), animalActivity.class);
                 startActivity(intentGoAnimal);
+                finish();
 
             }
         });

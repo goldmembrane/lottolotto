@@ -18,7 +18,7 @@ public class StartActivity extends AppCompatActivity {
        super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_start);
         MobileAds.initialize(this, "ca-app-pub-8799724102859231~7332614513");
-        mAdView = findViewById(R.id.adView);
+        mAdView = findViewById(R.id.adViewStart);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
@@ -28,6 +28,7 @@ public class StartActivity extends AppCompatActivity {
           public void onClick(View v) {
               Intent intent = new Intent(getApplicationContext(),preciousActivity.class);
               startActivity(intent);
+              finish();
           }
       });
 

@@ -23,9 +23,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         MobileAds.initialize(this, "ca-app-pub-8799724102859231~7332614513");
 
-        mAdView = findViewById(R.id.adView);
+        mAdView = findViewById(R.id.adViewMain);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
         Intent intentPrecious = getIntent();
         Intent intentPlace = getIntent();
         Intent intentColor = getIntent();
@@ -201,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intentGoBack = new Intent(getApplicationContext(), preciousActivity.class);
 
                 startActivity(intentGoBack);
+                finish();
             }
         });
 
